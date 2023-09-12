@@ -1,0 +1,26 @@
+{
+    "debug": "on",
+    "hanssel": {
+        "title": "Sample Konfabulator Widget",
+        "name": "main_window",
+        "width": 500,
+        "height": 500
+    },
+    "image": { 
+        "src": "Images/Sun.png",
+        "name": "sun1",
+        "hOffset": 250,
+        "vOffset": 250,
+        "alignment": "center"
+    },
+    "text": {
+        "data": "description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ligula eu velit tristique tempus. Quisque sed felis placerat, consequat enim vitae, eleifend mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras lacinia massa in mauris rhoncus fringilla. Etiam nec elit sed urna pulvinar fermentum sed in dolor. Morbi feugiat eros non efficitur varius. Vivamus semper odio ut sem vulputate, sit amet vulputate eros volutpat. Nullam sollicitudin malesuada libero in cursus. Sed nec risus consequat, tincidunt tortor vel, pharetra nibh. Sed sit amet pharetra orci. Etiam id purus nec nisl vulputate faucibus et vitae diam.",
+        "size": 36,
+        "style": "bold",
+        "name": "text1",
+        "hOffset": 250,
+        "vOffset": 100,
+        "alignment": "center",
+        "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+    }
+}
