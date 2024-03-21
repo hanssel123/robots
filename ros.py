@@ -78,3 +78,4 @@ class RosDataGenerator:
 
 if __name__ == "__main__":
     ros_pub_node = RosDataGenerator()
+    print("publishing")
