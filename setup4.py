@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # Rest of your code for sending other datapoints (geolocation, text, etc.)
 
     # Replace with the actual path to your video
-    video_path = "/home/hanssel/Documents/repos/formantsdk/videoplayback.mp4"
+    video_path = "/home/ubuntu/robots/independiente-santa-fe-0-3-1-0-huracan-copa-sudamericana-2015_R6XTKjNo.mp4"
 
     while True:
         send_video_frame_from_file(video_path, frame_rate=100)  # You can adjust frame rate here (e.g., send_video_frame_from_file(video_path, frame_rate=30))
