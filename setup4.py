@@ -21,13 +21,13 @@ if __name__ == "__main__":
     fclient.register_teleop_callback(handle_teleop, ["Buttons"])
 
     # Function to read and send video frames from a local MP4 file with adjustable frame rate
-    def send_video_frame_from_file(video_path, frame_rate=20):  # Adjust frame rate as needed
+    def send_video_frame_from_file(video_path, frame_rate=30):  # Adjust frame rate as needed
         cap = cv2.VideoCapture(video_path)
         if not cap.isOpened():
             print(f"Error opening video file: {video_path}")
             return
 
-        sleep_time = 1.0 / frame_rate  # Calculate sleep time based on desired frame rate
+        # sleep_time = 1.0 / frame_rate  # Calculate sleep time based on desired frame rate
 
         while True:
             ret, frame = cap.read()  # Read frame
@@ -41,18 +41,18 @@ if __name__ == "__main__":
                 print("Error encoding image")
                 continue
 
-            fclient.post_image("usb_cam", buffer.tostring())  # Send frame to Formant
+            fclient.post_image("avengers_old", buffer.tostring())  # Send frame to Formant
 
             # Handle button toggle (optional)
             if status["Button toggled"]:
                 break  # Break loop if button toggled
 
-            time.sleep(sleep_time)  # Adjust sleep time for desired frame rate
+            # time.sleep(sleep_time)  # Adjust sleep time for desired frame rate
 
     # Rest of your code for sending other datapoints (geolocation, text, etc.)
 
     # Replace with the actual path to your video
-    video_path = "/home/ubuntu/robots/video1.mp4"
+    video_path = "/home/hanssel/Documents/repos/formantsdk/video1.mp4"
 
     while True:
-        send_video_frame_from_file(video_path, frame_rate=100)  # You can adjust frame rate here (e.g., send_video_frame_from_file(video_path, frame_rate=30))
+        send_video_frame_from_file(video_path, frame_rate=30)  # You can adjust frame rate here (e.g., send_video_frame_from_file(video_path, frame_rate=30))
